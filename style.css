@@ -21,6 +21,32 @@ header img {
     max-width: 300px;
 }
 
+.topo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.topo img {
+  max-width: 320px;
+  width: 80%;
+  animation: brilho 3s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 10px rgba(255, 140, 0, 0.6));
+}
+
+@keyframes brilho {
+  from {
+    filter: drop-shadow(0 0 8px rgba(255, 140, 0, 0.4));
+  }
+  to {
+    filter:
+      drop-shadow(0 0 15px rgba(255, 180, 0, 0.8))
+      drop-shadow(0 0 30px rgba(255, 215, 0, 0.6));
+  }
+}
+
+
 
 .galeria {
 display: flex;
@@ -28,7 +54,7 @@ flex-direction: row;
 flex-wrap: wrap;
 gap: 50px;
 justify-content: center;
-
+padding: 50px;
 }
 
 
@@ -38,19 +64,34 @@ border-radius: 10px;
 cursor: pointer;
 padding: 10px;
 transition: transform 0.3s, box-shadow 0.3s;
+position: relative;
+  overflow: hidden;
 }
 
 
 .card img {
 border-radius: 10px;
-width: 150px;
+width: 100%;
+  max-width: 160px;
+filter: grayscale(100%) brightness(0.8);
+  transition: filter 0.4s ease, transform 0.4s ease;
+display: block;
+margin:  auto;
+}
+
+.card:hover img {
+  filter: grayscale(0%) brightness(1.1);
 }
 
 
 .card:hover {
+  filter: grayscale(0%) brightness(1.1);
 transform: scale(1.1);
 box-shadow: 0 0 15px gold;
 }
+
+
+
 
 .informacoes{
 margin: 30px auto;
@@ -63,7 +104,7 @@ width: 80vw;
 
 }
 
-.botao_jogar {
+/* .botao_jogar {
     margin-top: 20px;
     padding: 15px 30px;
     font-size: 18px;
@@ -73,7 +114,59 @@ width: 80vw;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+} */
+
+.botao_jogar {
+  background: linear-gradient(135deg, #b8860b, #ffcc33);
+  color: #2b1d0e;
+  font-weight: bold;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow:
+    0 0 10px rgba(255, 204, 51, 0.6),
+    0 0 20px rgba(184, 134, 11, 0.4);
 }
+
+.botao_jogar::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.8),
+    transparent 70%
+  );
+  transform: rotate(25deg);
+  animation: brilho-botao 3s linear infinite;
+}
+.botao_jogar:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 20px rgba(255, 215, 0, 0.9),
+    0 0 40px rgba(255, 165, 0, 0.6);
+}
+
+
+@keyframes brilho-botao {
+  from {
+    transform: translateX(-100%) rotate(25deg);
+  }
+  to {
+    transform: translateX(100%) rotate(25deg);
+  }
+}
+
+.botao_jogar:active {
+  transform: scale(0.95);
+}
+
 
 .topo_personagem{
     display: flex;
@@ -105,4 +198,30 @@ width: 80vw;
 
 footer {
     padding: 30px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .card img {
+    max-width: 120px;
+  }
+
+  .card:hover {
+    transform: none; /* evita zoom exagerado no mobile */
+  }
+  @media (max-width: 600px) {
+  .botao_jogar:hover {
+    transform: none;
+  }
+}
+
+}
+
+@media (max-width: 900px) {
+  .cards {
+    gap: 15px;
+  }
 }
