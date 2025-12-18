@@ -1,0 +1,25 @@
+body {
+  background: #0c1a1a;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#puzzle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.peca {
+  width: 70px;
+  height: 70px;
+  background: #2a4f4f;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+}

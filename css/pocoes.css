@@ -1,0 +1,25 @@
+body {
+  background: #0b0b0b;
+  color: #cfcfcf;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#ingredientes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ing {
+  width: 70px;
+  height: 70px;
+  background: #222;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+}

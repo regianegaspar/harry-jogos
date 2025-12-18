@@ -1,0 +1,19 @@
+/* body {
+  background: #0a0a14;
+  color: #e6e6ff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+} */
+
+.lua {
+  font-size: 80px;
+  margin: 40px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.lua:hover {
+  transform: scale(1.1);
+}
+
+

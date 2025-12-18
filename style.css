@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
+
+
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+background-color: #1b1b1b;
+color: white;
+font-family: "Cause", sans-serif;
+text-align: center;
+}
+
+header {
+    margin: 100px;
+}
+
+header img {
+    max-width: 300px;
+}
+
+
+.galeria {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+gap: 50px;
+justify-content: center;
+
+}
+
+
+.card {
+background-color: #333;
+border-radius: 10px;
+cursor: pointer;
+padding: 10px;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.card img {
+border-radius: 10px;
+width: 150px;
+}
+
+
+.card:hover {
+transform: scale(1.1);
+box-shadow: 0 0 15px gold;
+}
+
+.informacoes{
+margin: 30px auto;
+font-size: 18px;
+color: #ddd;
+padding: 10px;
+background-color: #3333333a;
+border-radius: 5px;
+width: 80vw;
+
+}
+
+.botao_jogar {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.topo_personagem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+.voltar {
+  display: inline-block;
+  margin: 15px;
+  text-decoration: none;
+  color: white;
+  background: #333;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.voltar:hover {
+  background: #555;
+}
+
+#area-jogo{
+  cursor: pointer;
+  padding: 50px;
+  margin: 20px;
+}
+
+footer {
+    padding: 30px;
+}

@@ -1,0 +1,33 @@
+body {
+  background: #0e1b2e;
+  color: #e0e0ff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#campo {
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  background: #1c2f4f;
+  position: relative;
+  border-radius: 10px;
+}
+
+.criatura {
+  position: absolute;
+  font-size: 30px;
+  opacity: 0.2; /* quase invisível */
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.criatura:hover {
+  opacity: 1;
+}
+
+
+#area-jogo {
+  display: none;
+  margin-top: 20px;
+}

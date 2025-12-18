@@ -1,0 +1,50 @@
+#labirinto {
+  display: grid;
+  grid-template-columns: repeat(10, 32px);
+  gap: 2px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.celula {
+  width: 32px;
+  height: 32px;
+  background: #1b1b1b;
+}
+
+.parede {
+  background: #000;
+}
+
+.sirius {
+  background: #4da6ff;
+}
+
+.saida {
+  background: #00ff99;
+}
+
+
+.instrucoes {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-left: 4px solid #4da6ff;
+  border-radius: 8px;
+  color: #e0e0ff;
+}
+
+.instrucoes h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.instrucoes ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.instrucoes li {
+  margin-bottom: 6px;
+}
